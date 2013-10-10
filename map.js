@@ -36,9 +36,9 @@ randomString = function(l) {
     return text;
 }
 
+var array = Underscore.range(1000)
 exports.compare = {
-  "underscore" : function () {
-    var array = Underscore.range(1000)
+  "underscore" : function () {    
     var randomStrings = Underscore.map(array, function(item) {
       return randomString(12);
     });
@@ -47,7 +47,6 @@ exports.compare = {
     });
   },
   "lodash" : function () {
-    var array = Lodash.range(1000)
     var randomStrings = Lodash.map(array, function(item) {
       return randomString(12);
     });
@@ -56,7 +55,6 @@ exports.compare = {
     });
   },
   "lazy" : function () {
-    var array = Lazy.range(1000).toArray()
     var randomStrings = Lazy(array).map(function(item) {
       return randomString(12);
     }).toArray();
