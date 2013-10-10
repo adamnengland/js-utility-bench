@@ -15,7 +15,7 @@ exports.compare = {
   },
   "lazy" : function () {
     Lazy(array).find(function(item) {
-      return item == 1;
+      return item == 500;
     })
   }
 };
